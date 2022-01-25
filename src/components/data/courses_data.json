@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "kurs": "HipHop Kids",
+        "tag": "Montag",
+        "uhrzeit": "17:15"
+    },
+    {
+        "id": 2,
+        "kurs": "Starmoves HipHop",
+        "tag": "Dienstag",
+        "uhrzeit": "18:00"
+    },
+    {
+        "id": 3,
+        "kurs": "HipHop Kids",
+        "tag": "Donnerstag",
+        "uhrzeit": "17:30"
+    }
+]
