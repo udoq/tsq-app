@@ -2,6 +2,7 @@ import { useResolvedPath } from "react-router";
 import myMembers from "./data/members_data.json";
 
 function Members() {
+  let today = new Date(); 
   return (
     <div className="m-5">
       <table className="min-w-full border-collapse block md:table">
@@ -17,6 +18,9 @@ function Members() {
               Email
             </th>
             <th className="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+              Alter 
+            </th>
+            <th className="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
               Actions
             </th>
           </tr>
@@ -28,19 +32,25 @@ function Members() {
                 <span className="inline-block w-1/3 md:hidden font-bold">
                   Vorname
                 </span>
-                {member.vorname}
+                {member.first_name}
               </td>
               <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                 <span className="inline-block w-1/3 md:hidden font-bold">
                   Nachname
                 </span>
-                {member.nachname}
+                {member.last_name}
               </td>
               <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                 <span className="inline-block w-1/3 md:hidden font-bold">
                   Email
                 </span>
                 {member.email}
+              </td>
+              <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+                <span className="inline-block w-1/3 md:hidden font-bold">
+                  Alter
+                </span>
+                {(Date.parse(member.birthday)).getFullYear()}
               </td>
               <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                 <span className="inline-block w-1/3 md:hidden font-bold">
