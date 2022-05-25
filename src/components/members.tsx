@@ -1,8 +1,11 @@
+import React from "react";
+import DayJS from "react-dayjs";
 import { useResolvedPath } from "react-router";
 import myMembers from "./data/members_data.json";
 
+
+
 function Members() {
-  let today = new Date(); 
   return (
     <div className="m-5">
       <table className="min-w-full border-collapse block md:table">
@@ -50,7 +53,7 @@ function Members() {
                 <span className="inline-block w-1/3 md:hidden font-bold">
                   Alter
                 </span>
-                {(Date.parse(member.birthday)).getFullYear()}
+                {member.birthday}
               </td>
               <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                 <span className="inline-block w-1/3 md:hidden font-bold">
